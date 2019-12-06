@@ -1,0 +1,47 @@
+{
+  "name": "h5-vue",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode dev",
+    "build-test": "vue-cli-service build --mode test",
+    "build-uat": "vue-cli-service build --mode uat",
+    "build-prod": "vue-cli-service build --mode prod",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "core-js": "^3.3.2",
+    "jquery": "^3.4.1",
+    "postcss-px-to-viewport": "^1.1.1",
+    "sha1": "^1.1.1",
+    "vant": "^2.2.13",
+    "vue": "^2.6.10",
+    "vue-clipboard2": "^0.3.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-import": "^1.12.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
