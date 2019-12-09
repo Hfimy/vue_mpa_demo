@@ -1,5 +1,10 @@
-<template></template>
+<template>
+  <div>vue mpa demo</div>
+</template>
 
+
+<script>
+</script>
 
 <style lang="less" scoped>
 main {
